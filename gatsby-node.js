@@ -63,7 +63,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: r.toPath,
       component: path.resolve("./src/templates/to-path.js"),
-      context: { example: r.fromPath, toPath: r.toPath },
+      context: r,
     })
   })
 }
