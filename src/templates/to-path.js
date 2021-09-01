@@ -2,7 +2,7 @@ import * as React from "react"
 
 const ToPath = ({ pageContext }) => {
   const { fromPath, toPath, isPermanent } = pageContext
-  const isBrowser = typeof window !== undefined
+  const isBrowser = typeof window !== "undefined"
 
   return (
     <>
