@@ -6,7 +6,6 @@ const redirects = [
   {
     fromPath: "/case-2",
     toPath: "/temporary-not-prettified/",
-    isPermanent: true,
   },
   {
     fromPath: "/case-3",
