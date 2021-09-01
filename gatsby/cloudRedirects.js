@@ -18,25 +18,25 @@ const redirects = [
     isPermanent: true,
   },
   {
-    fromPath: "/case-5/wildcard-temp/*",
+    fromPath: "/case-5/*",
     toPath: "/wildcard-temporary-non-trailing-slash",
   },
   {
-    fromPath: "/case-6/wildcard-temp/*",
+    fromPath: "/case-6/*",
     toPath: "/wildcard-temporary-trailing-slash/",
   },
   {
-    fromPath: "/case-7/wildcard-perm/*",
+    fromPath: "/case-7/*",
     toPath: "/wildcard-permanent-non-trailing-slash",
     isPermanent: true,
   },
   {
-    fromPath: "/case-8/wildcard-perm/*",
+    fromPath: "/case-8/*",
     toPath: "/wildcard-permanent-trailing-slash/",
     isPermanent: true,
   },
   {
-    fromPath: "/case-9/page-exists",
+    fromPath: "/case-9",
     toPath: "/redirect-when-page-exists",
   },
 ]
