@@ -1,6 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const { createGatbsyCloudRedirects } = require("./gatsby/cloudRedirects")
+const { redirects } = require("./gatsby/cloudRedirects")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions
@@ -58,7 +58,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   }
 
-  createGatbsyCloudRedirects(createRedirect)
+  redirects.forEach(r => {
+    createRedirect(r)
+    createPage({
+      path: r.toPath,
+      component: path.resolve("./src/templates/to-path.js"),
+      context: { example: r.fromPath, toPath: r.toPath },
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

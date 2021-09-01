@@ -19,7 +19,4 @@ const redirects = [
   },
 ]
 
-const createGatbsyCloudRedirects = createRedirect =>
-  redirects.forEach(r => createRedirect(r))
-
-module.exports = { createGatbsyCloudRedirects }
+module.exports = { redirects }
