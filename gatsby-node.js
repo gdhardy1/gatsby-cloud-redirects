@@ -1,8 +1,9 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createGatbsyCloudRedirects } = require("./gatsby/cloudRedirects")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
@@ -56,6 +57,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  createGatbsyCloudRedirects(createRedirect)
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
