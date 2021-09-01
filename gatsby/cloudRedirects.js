@@ -36,7 +36,7 @@ const redirects = [
     isPermanent: true,
   },
   {
-    from: "/case-9/page-exists",
+    fromPath: "/case-9/page-exists",
     toPath: "/redirect-when-page-exists",
   },
 ]
